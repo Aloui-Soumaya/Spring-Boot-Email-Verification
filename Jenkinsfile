@@ -3,13 +3,12 @@ pipeline {
     stages {
         stage('clone') {
             steps {
-                sh "rm -rf *"
                 sh "git clone https://github.com/Aloui-Soumaya/Spring-Boot-Email-Verification.git"
             }
         }
-        stage('Build') {
+        stage('Build') { 
             steps {
-                sh 'mvn clean install'
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
         stage('Test') {
