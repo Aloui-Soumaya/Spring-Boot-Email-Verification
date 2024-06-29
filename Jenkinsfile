@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    tools {
-        maven 'Maven 3.8.1' // Use the name you configured in Jenkins
-    }
     stages {
         stage('clone') {
             steps {
